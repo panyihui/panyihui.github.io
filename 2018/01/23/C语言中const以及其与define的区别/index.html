@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>第一次更新 | Pan</title>
+    <title>C语言中const以及其与define的区别 | Pan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Pan">
     
-    <meta name="description" content="第一次更博 ( •̀ ω •́ )y
-hexo对我这样的小白来说真的十分友好，操作简单上手快。假期的第一天就从中午开始了，上周兴致盎然的寒假减肥计划抛之脑后ε=ε=ε=(~￣▽￣)~之后会持续不间断、不定期地更新（看心情吧）">
+    <meta name="description" content="·const是用来限定一个变量不允许被改变的修饰符。被const修饰的词是只读变量。
+·const与define的区别1）const是关键字，define不是。2）const可以进行类型检查，define不可以。因为宏定义常量没有数据类型。3）举个栗子：
+#define AB 4+5
+则表达式2*A">
     
     
     
@@ -70,15 +72,15 @@ hexo对我这样的小白来说真的十分友好，操作简单上手快。假�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/01/23/panyihui-github-io/" title="第一次更新" itemprop="url">第一次更新</a>
+      <a href="/2018/01/23/C语言中const以及其与define的区别/" title="C语言中const以及其与define的区别" itemprop="url">C语言中const以及其与define的区别</a>
   </h1>
   <p class="article-author">By
     
       <a href="panyihui.github.io" title="Pan">Pan</a>
     </p>
   <p class="article-time">
-    <time datetime="2018-01-23T03:51:52.000Z" itemprop="datePublished">2018-01-23</time>
-    更新日期:<time datetime="2018-01-23T14:52:24.566Z" itemprop="dateModified">2018-01-23</time>
+    <time datetime="2018-01-23T15:34:45.000Z" itemprop="datePublished">2018-01-23</time>
+    更新日期:<time datetime="2018-01-23T15:38:03.280Z" itemprop="dateModified">2018-01-23</time>
     
   </p>
 </header>
@@ -90,8 +92,15 @@ hexo对我这样的小白来说真的十分友好，操作简单上手快。假�
 		
 		</div>
 		
-		<p>第一次更博 ( •̀ ω •́ )y</p>
-<p>hexo对我这样的小白来说真的十分友好，操作简单上手快。<br>假期的第一天就从中午开始了，上周兴致盎然的寒假减肥计划抛之脑后ε=ε=ε=(~￣▽￣)~<br>之后会持续不间断、不定期地更新（看心情吧）</p>
+		<p>·const是用来限定一个变量不允许被改变的修饰符。被const修饰的词是只读变量。</p>
+<p>·const与define的区别<br>1）const是关键字，define不是。<br>2）const可以进行类型检查，define不可以。因为宏定义常量没有数据类型。<br>3）举个栗子：</p>
+<pre><code>#define AB 4+5
+则表达式2*AB*3就相当于是2*4+5*3，结果是8+15=23   （C语言考试就老爱考define宏定义的用法，一不留神就上当了）
+
+const int AB = 4+5
+则表达式2*AB*3就相当于是2*9*3，结果是54
+</code></pre><p>·值得注意的是：用一个const变量来初始化数组，编译器会报错。<br>比如：<br>    const int n = 3;<br>    double a[n];<br>    因为在C语言中，数组的大小应该是个常量，而const int n中的n只是一个变量。</p>
+<p>·“尽量使用编译器而不用预处理”<br>    我的C语言老师上课的时候，const的部分是一笔带过的，反而define讲的多、用的也多，这就导致我一开始写编程作业几乎没用到const。<br>    后来一直没弄明白const和define的差别，就搜了很多大佬的回答和心得，印象最深的就是这句话“尽量使用编译器而不用预处理”。<a href="http://m.jb51.net/article/34163.htm" target="_blank" rel="external">http://m.jb51.net/article/34163.htm</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -101,7 +110,7 @@ hexo对我这样的小白来说真的十分友好，操作简单上手快。假�
 
 <div class="article-share" id="share">
 
-  <div data-url="panyihui.github.io/2018/01/23/panyihui-github-io/" data-title="第一次更新 | Pan" data-tsina="null" class="share clearfix">
+  <div data-url="panyihui.github.io/2018/01/23/C语言中const以及其与define的区别/" data-title="C语言中const以及其与define的区别 | Pan" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -110,14 +119,14 @@ hexo对我这样的小白来说真的十分友好，操作简单上手快。假�
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/01/23/C语言中const以及其与define的区别/" title="C语言中const以及其与define的区别">
-  <strong>PREVIOUS:</strong><br/>
-  <span>
-  C语言中const以及其与define的区别</span>
+
+<div class="next">
+<a href="/2018/01/23/panyihui-github-io/"  title="第一次更新">
+ <strong>NEXT:</strong><br/> 
+ <span>第一次更新
+</span>
 </a>
 </div>
-
 
 </nav>
 
